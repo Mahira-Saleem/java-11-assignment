@@ -53,11 +53,46 @@ document.write("Absolute value: " + ans_3 + "<br>" + "<hr>");
 //  Display the value of dice in your browser.: 
 document.write("<h4>Question 4</h4>");
 
-var dice = parseInt(Math.random());
+var dice = parseInt(Math.random()*6)+1;
 document.write(dice + "<br>");
 
 // 5. Write a program that simulates a coin toss using random() method of JS Math class. 
 // Display the value of coin in your browser 
+document.write("<h4>Question 5</h4>");
 
+var toss = parseInt(Math.random()*2) +1;
+if (toss == 1){
+      document.write("Head"  + "<br>");
+}else {
+      document.write("Teals " + "<br>");
+}
+document.write("Random coin value : " + toss + "<br>");
 
+// 6. Write a program that shows a random number between 1 and 100 in your browser
+document.write("<h4>Question 6</h4>");
 
+var random = parseInt(Math.random()*100) +1;
+document.write("A random number between 1 and 100 : " + "<b>" + random  + "</b>" + "<br>");
+
+// 7. Write a program that asks the user about his weight. Parse the user input and display his weight in your browser. Possible user inputs can be: 
+// a. 50  b. 50kgs  c. 50.2kgs  d. 50.2kilograms.
+document.write("<h4>Question 7</h4>");
+
+var userInput = prompt("Enter your weight in kgs:");
+var weight = parseFloat(userInput);
+document.write("The weight of user is " + weight + " kilograms");
+
+// 8. Write a program that stores a random secret number from 1 to 10 in a variable. 
+// Ask the user to input a number between 1 and 10. 
+// If the user input equals the secret number, congratulate the user. 
+document.write("<h4>Question 8</h4>");
+
+var secretNum = 1;
+var userGuess = parseInt(prompt("Guess a number between 1 and 10:"));
+
+if (userGuess == secretNum) {
+    alert("Congratulations! You guessed it right! 🎉");
+    document.write("You won! The number was " + secretNum);
+} else {
+    document.write("Wrong guess! It was " + secretNum);
+}
